@@ -1,0 +1,14 @@
+[
+    {
+        "action": "jump",
+        "frame": 141
+    },
+    {
+        "action": "jump",
+        "frame": 193
+    },
+    {
+        "action": "jump",
+        "frame": 318
+    }
+]
