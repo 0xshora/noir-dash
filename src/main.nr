@@ -36,13 +36,6 @@ fn main(
     let MAX_OBJECTS = 3;
     let MAX_ACTIONS = 8;
 
-    let mut player_x = 0;
-    let mut player_y = 0;
-    let mut player_vel = 0;
-    let mut player_acc = 0;
-
-    let speed = 0;
-
     let ACTION_THRESHOLD = 300; // the length of jump.
 
     let mut is_clear = true;
