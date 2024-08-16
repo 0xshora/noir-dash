@@ -1,3 +1,58 @@
-actions = ["", "", "", "", "", "", "", ""]
-block = [["", ""], ["", ""], ["", ""]]
-needle = [["", ""], ["", ""], ["", ""]]
+[[actions]]
+atype = ""
+x = ""
+y = ""
+
+[[actions]]
+atype = ""
+x = ""
+y = ""
+
+[[actions]]
+atype = ""
+x = ""
+y = ""
+
+[[actions]]
+atype = ""
+x = ""
+y = ""
+
+[[actions]]
+atype = ""
+x = ""
+y = ""
+
+[[actions]]
+atype = ""
+x = ""
+y = ""
+
+[[actions]]
+atype = ""
+x = ""
+y = ""
+
+[[actions]]
+atype = ""
+x = ""
+y = ""
+
+[config]
+bufferHeight = ""
+height = ""
+
+[[objects]]
+btype = ""
+x = ""
+y = ""
+
+[[objects]]
+btype = ""
+x = ""
+y = ""
+
+[[objects]]
+btype = ""
+x = ""
+y = ""

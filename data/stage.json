@@ -2,6 +2,6 @@
     {
         "x": 200,
         "y": 0,
-        "type": "block"
+        "btype": "block"
     }
 ]

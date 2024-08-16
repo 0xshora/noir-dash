@@ -1,8 +1,10 @@
 use crate::main;
 use crate::Block;
+use crate::Action;
+use crate::Config;
 
 #[test]
-fn test_main() {
+fn test_success_1() {
 
     // 
     let objects = [
@@ -11,11 +13,40 @@ fn test_main() {
         Block { x: 0, y: 0, btype: 0 },
     ];
     let actions = [
-        141, 193, 318, 0, 0, 0, 0, 0
+        Action { x: 1199, y: 319, atype: 0 },
+        Action { x: 0, y: 0, atype: 0 },
+        Action { x: 0, y: 0, atype: 0 },
+        Action { x: 0, y: 0, atype: 0 },
+        Action { x: 0, y: 0, atype: 0 },
+        Action { x: 0, y: 0, atype: 0 },
+        Action { x: 0, y: 0, atype: 0 },
+        Action { x: 0, y: 0, atype: 0 },
     ];
+    let config = Config {
+        height: 340,
+        bufferHeight: 70,
+    };
     
-    main(objects, actions);
+    main(objects, actions, config);
 
     // Uncomment to make test fail
     // main(1, 1);
+}
+
+#[test]
+fn test_clear_1() {
+    let objects = [
+        Block { x: 200, y: 0, btype: 1 },
+        Block { x: 0, y: 0, btype: 0 }, Block { x: 0, y: 0, btype: 0 }
+    ];
+    let actions = [
+        Action { x: 1221, y: 319, atype: 0 }, Action { x: 1431, y: 269, atype: 0 },
+        Action { x: 0, y: 0, atype: 0 }, Action { x: 0, y: 0, atype: 0 }, Action { x: 0, y: 0, atype: 0 }, Action { x: 0, y: 0, atype: 0 }, Action { x: 0, y: 0, atype: 0 }, Action { x: 0, y: 0, atype: 0 }
+    ];
+    let config = Config {
+        height: 340,
+        bufferHeight: 70,
+    };
+    
+    main(objects, actions, config);
 }
