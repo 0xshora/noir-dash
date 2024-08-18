@@ -75,6 +75,8 @@ Then, you can copy it and paste it to `./src/tests/main_test.nr` or smth.
 - [ ] Test for needles
 - [ ] Test for complex stages
 - [ ] Randomize initial positions for each user?
+- [ ] check if the user jump from correct place. (not from air.)
+- [ ] jump from ground or block(id)
 
 ## Appendix
 - Currently, Noir only supports fixed-length arrays, so maximum values are set for actions and other parameters.
