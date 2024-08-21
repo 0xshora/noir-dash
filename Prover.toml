@@ -40,7 +40,11 @@ y = ""
 
 [config]
 bufferHeight = ""
+gravity_y = ""
 height = ""
+preparation_width = ""
+speed_x = ""
+speed_y = ""
 
 [[objects]]
 btype = ""

@@ -1,2 +1,6 @@
 height = 340
 bufferHeight = 70
+gravity_y = 2000
+speed_x = 340
+speed_y = 700
+preparation_width = 1200

@@ -22,9 +22,13 @@ fn test_success_1() {
         Action { x: 0, y: 0, atype: 0 },
         Action { x: 0, y: 0, atype: 0 },
     ];
-    let config = Config {
+    let config = Config{
         height: 340,
         bufferHeight: 70,
+        gravity_y: 2000,
+        speed_x: 340,
+        speed_y: 700,
+        preparation_width: 1200,
     };
     
     main(objects, actions, config);
@@ -46,6 +50,10 @@ fn test_clear_1() {
     let config = Config {
         height: 340,
         bufferHeight: 70,
+        gravity_y: 2000,
+        speed_x: 340,
+        speed_y: 700,
+        preparation_width: 1200,
     };
     
     main(objects, actions, config);

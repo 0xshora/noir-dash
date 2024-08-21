@@ -17,7 +17,11 @@ struct Action {
 
 struct Config {
     height: u64,
-    bufferHeight: u64
+    bufferHeight: u64,
+    gravity_y: u64,
+    speed_x: u64,
+    speed_y: u64,
+    preparation_width: u64
 }
 
 fn main(
@@ -29,10 +33,6 @@ fn main(
     std::println(actions);
 
     // Constants
-    let GRAVITY_Y = 2000;
-    let SPEED_X = 340;
-    let SPEED_Y = 700; // should be -700. (top is 0, bottom is plus.)
-    let PREPARATION_WIDTH = 1200;
     let MAX_OBJECTS = 3;
     let MAX_ACTIONS = 8;
 
@@ -51,7 +51,7 @@ fn main(
             std::println("There is an object.");
             // TODO: Implement the logic.
 
-            let object_x = objects[i].x + PREPARATION_WIDTH;
+            let object_x = objects[i].x + config.preparation_width;
             let object_y = config.height - objects[i].y - config.bufferHeight;
             
             // loop for players action.
@@ -66,23 +66,29 @@ fn main(
                         std::println("this action is not relevant.")
                     } else {
                         std::println(actions[j]);
+                        // check if the y-coordinate of the player is valid or not.
+                        if (actions[j].y > config.height) {
+                            std::println("player is outside");
+                            is_alive = false;
+                        }
+
                         // let player_x_0 = actions[j].x;
                         let player_y_0 = actions[j].y;
                         let mut player_y = 0;
-                        let t = length * 100 / SPEED_X;
-                        std::println(SPEED_Y * t / 100);
-                        if (player_y_0 + GRAVITY_Y * t * t / (10000 * 2) < (SPEED_Y * t / 100)) {
+                        let t = length * 100 / config.speed_x;
+                        std::println(config.speed_y * t / 100);
+                        if (player_y_0 + config.gravity_y * t * t / (10000 * 2) < (config.speed_y * t / 100)) {
                             std::println("player is outside");
                             player_y = 0;
                         } else {
-                            player_y = player_y_0 + GRAVITY_Y * t * t / (10000 * 2) - (SPEED_Y * t / 100);
+                            player_y = player_y_0 + config.gravity_y * t * t / (10000 * 2) - (config.speed_y * t / 100);
                         }
                         std::print("t: ");
                         std::println(t);
                         std::print("SPEED_Y: ");
-                        std::println(SPEED_Y);
+                        std::println(config.speed_y);
                         std::print("Gravity: ");
-                        std::println(GRAVITY_Y);
+                        std::println(config.gravity_y);
                         std::print("player_y: ");
                         std::println(player_y);
                         std::print("object_y: ");
