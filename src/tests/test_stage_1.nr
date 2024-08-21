@@ -4,7 +4,7 @@ use crate::Action;
 use crate::Config;
 
 #[test]
-fn test_success_1() {
+fn test_clear_1() {
 
     // 
     let objects = [
@@ -42,7 +42,7 @@ fn test_success_1() {
 }
 
 #[test]
-fn test_clear_1() {
+fn test_clear_2() {
     let objects = [
         Block { x: 200, y: 0, btype: 1 },
         Block { x: 0, y: 0, btype: 0 }, Block { x: 0, y: 0, btype: 0 }
@@ -52,6 +52,57 @@ fn test_clear_1() {
         Action { x: 0, y: 0, atype: 0 }, Action { x: 0, y: 0, atype: 0 }, Action { x: 0, y: 0, atype: 0 }, Action { x: 0, y: 0, atype: 0 }, Action { x: 0, y: 0, atype: 0 }, Action { x: 0, y: 0, atype: 0 }
     ];
 
+    let config = Config{
+        height: 390,
+        bufferHeight: 70,
+        gravity_y: 2000,
+        speed_x: 340,
+        speed_y: 700,
+        preparation_width: 1200,
+        player_width_half: 25,
+        player_height_half: 21,
+        block_width_half: 25,
+        block_height_half: 28,
+    };
+    
+    main(objects, actions, config);
+}
+
+#[test(should_fail)]
+fn test_dead_1() {
+    let objects = [
+        Block { x: 200, y: 0, btype: 1 },
+        Block { x: 0, y: 0, btype: 0 }, Block { x: 0, y: 0, btype: 0 }
+    ];
+    let actions = [
+        Action { x: 0, y: 0, atype: 0 }, Action { x: 0, y: 0, atype: 0 }, Action { x: 0, y: 0, atype: 0 }, Action { x: 0, y: 0, atype: 0 }, Action { x: 0, y: 0, atype: 0 }, Action { x: 0, y: 0, atype: 0 }, Action { x: 0, y: 0, atype: 0 }, Action { x: 0, y: 0, atype: 0 }
+    ];
+    let config = Config{
+        height: 390,
+        bufferHeight: 70,
+        gravity_y: 2000,
+        speed_x: 340,
+        speed_y: 700,
+        preparation_width: 1200,
+        player_width_half: 25,
+        player_height_half: 21,
+        block_width_half: 25,
+        block_height_half: 28,
+    };
+    
+    main(objects, actions, config);
+}
+
+#[test(should_fail)]
+fn test_dead_2() {
+    let objects = [
+        Block { x: 200, y: 0, btype: 1 },
+        Block { x: 0, y: 0, btype: 0 }, Block { x: 0, y: 0, btype: 0 }
+    ];
+    let actions = [
+        Action { x: 185, y: 318, atype: 0 }, Action { x: 417, y: 307, atype: 0 }, Action { x: 649, y: 307, atype: 0 }, Action { x: 881, y: 307, atype: 0 }, Action { x: 1114, y: 307, atype: 0 }, Action { x: 1346, y: 307, atype: 0 },
+        Action { x: 0, y: 0, atype: 0 }, Action { x: 0, y: 0, atype: 0 }
+    ];
     let config = Config{
         height: 390,
         bufferHeight: 70,

@@ -62,81 +62,93 @@ fn main(
             let object_y = config.height - objects[i].y - config.bufferHeight;
             
             // loop for players action.
+            // get the closest action to the object.
+
+            let mut idx = 0; // idx == closest action index.
+            let mut closest_action_distance = 999999;
+
             for j in 0..MAX_ACTIONS {
-                if (actions[j].x >= object_x) {
-                    // skip
-                    std::println("this action is not relevant.")
-                } else {
-                    let length = object_x- actions[j].x;
-                    if (length > ACTION_THRESHOLD) {
-                        // skip
-                        std::println("this action is not relevant.")
-                    } else {
-                        std::println(actions[j]);
-                        // TODO: check if the y-coordinate of the player is valid or not.
-                        std::println("check player's y-coordinate.");
-                        std::println(actions[j].y); // 319
-                        std::println(config.height); // 390
-                        std::println(config.bufferHeight); // 70
-                        std::println(config.player_height_half); // 21
-                        std::println(config.block_height_half); // 28
-
-                        // check if the jump from the ground.
-
-                        if (actions[j].y > ground_y - HEIGHT_THRESHOLD & actions[j].y < ground_y + HEIGHT_THRESHOLD) {
-                            std::println("the player jumped from the ground.");
-                            // is_alive = true;
-                        } else if (actions[j].y > ground_y - config.block_height_half - HEIGHT_THRESHOLD & actions[j].y < ground_y - config.block_height_half + HEIGHT_THRESHOLD) {
-                            std::println("the player jumped from the block.");
-                            // is_alive = true;
-                        } else {
-                            std::println("the player jumped from the air.");
-                            is_cheating = true;
-                        }
-
-
-
-                        // valid_height = config.height - config.bufferHeight; // the height of the ground. ??
-
-                        if (actions[j].y > config.height) {
-                            std::println("player is below the ground.");
-                            is_alive = false;
-                        }
-
-                        // let player_x_0 = actions[j].x;
-                        let player_y_0 = actions[j].y;
-                        let mut player_y = 0;
-                        let t = length * 100 / config.speed_x; // multiply by 100 to avoid float.
-                        std::println(config.speed_y * t / 100);
-
-                        // divide by 100(^2) to reset to the original scale.
-                        // p_y = p_y_0 + g * t^2 / 2 - v_y * t (cuz top-y==0, bottom-y==max).
-                        // if p_y < 0, the player is outside of the screen. 
-                        if (player_y_0 + config.gravity_y * t * t / (10000 * 2) < (config.speed_y * t / 100)) {
-                            std::println("player is outside");
-                            player_y = 0;
-                        } else {
-                            player_y = player_y_0 + config.gravity_y * t * t / (10000 * 2) - (config.speed_y * t / 100);
-                        }
-                        std::print("t: ");
-                        std::println(t);
-                        std::print("SPEED_Y: ");
-                        std::println(config.speed_y);
-                        std::print("Gravity: ");
-                        std::println(config.gravity_y);
-                        std::print("player_y: ");
-                        std::println(player_y);
-                        std::print("object_y: ");
-                        std::println(object_y);
-
-                        if (player_y <= object_y) {
-                            is_alive = true;
-                        } else {
-                            is_alive = false;
-                        }
+                let action_x = actions[j].x + config.block_width_half + config.player_width_half;
+                if action_x < object_x {
+                    let distance = object_x - action_x;
+                    if distance < closest_action_distance {
+                        closest_action_distance = distance;
+                        idx = j;
                     }
                 }
             }
+
+            let length = object_x - actions[idx].x - config.block_width_half - config.player_width_half; // check the collision on the left side.
+            if length > ACTION_THRESHOLD {
+                // the closest action is too far.
+                std::println("The closest action is too far.");
+            } else {
+                std::print("The closest action is: ");
+                std::println(actions[idx]);
+
+                let length = object_x - actions[idx].x - config.block_width_half - config.player_width_half; // check the collision on the left side.
+
+                if (actions[idx].y > ground_y - HEIGHT_THRESHOLD & actions[idx].y < ground_y + HEIGHT_THRESHOLD) {
+                    std::println("the player jumped from the ground.");
+                    // is_alive = true;
+                } else if (actions[idx].y > ground_y - config.block_height_half - HEIGHT_THRESHOLD & actions[idx].y < ground_y - config.block_height_half + HEIGHT_THRESHOLD) {
+                    std::println("the player jumped from the block.");
+                    // is_alive = true;
+                } else {
+                    std::println("the player jumped from the air.");
+                    is_cheating = true;
+                }
+
+                if (actions[idx].y > config.height) {
+                    std::println("player is below the ground.");
+                    is_alive = false;
+                }
+
+
+                let player_y_0 = actions[idx].y;
+                let mut player_y = 0;
+                let t = length * 100 / config.speed_x; // multiply by 100 to avoid float.
+                // std::println(config.speed_y * t / 100);
+
+                // divide by 100(^2) to reset to the original scale.
+                // p_y = p_y_0 + g * t^2 / 2 - v_y * t (cuz top-y==0, bottom-y==max).
+                // if p_y < 0, the player is outside of the screen. 
+                if (player_y_0 + config.gravity_y * t * t / (10000 * 2) < (config.speed_y * t / 100)) {
+                    std::println("player is outside");
+                    player_y = 0;
+                } else {
+                    player_y = player_y_0 + config.gravity_y * t * t / (10000 * 2) - (config.speed_y * t / 100);
+                }
+
+                std::print("length: ");
+                std::println(length);
+                std::print("t: ");
+                std::println(t);
+                std::print("SPEED_Y: ");
+                std::println(config.speed_y);
+                std::print("Gravity: ");
+                std::println(config.gravity_y);
+                std::print("player_y: ");
+                std::println(player_y);
+                std::print("object_y: ");
+                std::println(object_y);
+
+                std::print("player_y + config.player_height_half: ");
+                std::println(player_y + config.player_height_half);
+                std::print("object_y - config.block_height_half: ");
+                std::println(object_y - config.block_height_half);
+
+                // check if the player's bottom-right is above the object's top-left.
+                // check if the player's top-right is below the object's bottom-left as well.(WIP)
+                if (player_y + config.player_height_half <= object_y - config.block_height_half) {
+                    std::println("Player is above the object.");
+                    is_alive = true;
+                } else {
+                    std::println("Player is below the object.");
+                    is_alive = false;
+                }
+            }
+
             if is_alive {
                 std::println("Player is alive.");
             } else {

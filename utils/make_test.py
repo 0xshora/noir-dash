@@ -33,9 +33,17 @@ fn {test_name}() {{
         {', '.join(f"Action {{ x: {int(action['x'])}, y: {int(action['y'])}, atype: {0 if action['action'] == 'jump' else 1} }}" for action in actions)},
         {', '.join(f"Action {{ x: 0, y: 0, atype: 0 }}" for _ in range(MAX_ACTIONS - len(actions)))}
     ];
-    let config = Config {{
+    let config = Config{{
         height: {config['height']},
         bufferHeight: {config['bufferHeight']},
+        gravity_y: {config['gravity_y']},
+        speed_x: {config['speed_x']},
+        speed_y: {config['speed_y']},
+        preparation_width: {config['preparation_width']},
+        player_width_half: {config['player_width_half']},
+        player_height_half: {config['player_height_half']},
+        block_width_half: {config['block_width_half']},
+        block_height_half: {config['block_height_half']},
     }};
     
     main(objects, actions, config);
