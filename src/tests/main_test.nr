@@ -23,12 +23,16 @@ fn test_success_1() {
         Action { x: 0, y: 0, atype: 0 },
     ];
     let config = Config{
-        height: 340,
+        height: 390,
         bufferHeight: 70,
         gravity_y: 2000,
         speed_x: 340,
         speed_y: 700,
         preparation_width: 1200,
+        player_width_half: 25,
+        player_height_half: 21,
+        block_width_half: 25,
+        block_height_half: 28,
     };
     
     main(objects, actions, config);
@@ -47,13 +51,18 @@ fn test_clear_1() {
         Action { x: 1221, y: 319, atype: 0 }, Action { x: 1431, y: 269, atype: 0 },
         Action { x: 0, y: 0, atype: 0 }, Action { x: 0, y: 0, atype: 0 }, Action { x: 0, y: 0, atype: 0 }, Action { x: 0, y: 0, atype: 0 }, Action { x: 0, y: 0, atype: 0 }, Action { x: 0, y: 0, atype: 0 }
     ];
-    let config = Config {
-        height: 340,
+
+    let config = Config{
+        height: 390,
         bufferHeight: 70,
         gravity_y: 2000,
         speed_x: 340,
         speed_y: 700,
         preparation_width: 1200,
+        player_width_half: 25,
+        player_height_half: 21,
+        block_width_half: 25,
+        block_height_half: 28,
     };
     
     main(objects, actions, config);

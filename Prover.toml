@@ -39,9 +39,13 @@ x = ""
 y = ""
 
 [config]
+block_height_half = ""
+block_width_half = ""
 bufferHeight = ""
 gravity_y = ""
 height = ""
+player_height_half = ""
+player_width_half = ""
 preparation_width = ""
 speed_x = ""
 speed_y = ""
