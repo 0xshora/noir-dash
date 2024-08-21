@@ -71,7 +71,7 @@ $ python ./utils/make_test.py -c ./data/testStage/config_1.toml -a ./data/testSt
 Then, you can copy it and paste it to `./src/tests/main_test.nr` or smth.
 
 ## TODO
-- [ ] Handle the size of objects
+- [x] Handle the size of objects
 - [ ] Test for needles
 - [ ] Test for complex stages
 - [ ] Randomize initial positions for each user?
