@@ -13,7 +13,7 @@ fn test_clear_1() {
         Block { x: 0, y: 0, btype: 0 },
     ];
     let actions = [
-        Action { x: 1199, y: 319, atype: 0 },
+        Action { x: 1199, y: 319, atype: 1 },
         Action { x: 0, y: 0, atype: 0 },
         Action { x: 0, y: 0, atype: 0 },
         Action { x: 0, y: 0, atype: 0 },
@@ -48,7 +48,7 @@ fn test_clear_2() {
         Block { x: 0, y: 0, btype: 0 }, Block { x: 0, y: 0, btype: 0 }
     ];
     let actions = [
-        Action { x: 1221, y: 319, atype: 0 }, Action { x: 1431, y: 269, atype: 0 },
+        Action { x: 1221, y: 319, atype: 1 }, Action { x: 1431, y: 269, atype: 1 },
         Action { x: 0, y: 0, atype: 0 }, Action { x: 0, y: 0, atype: 0 }, Action { x: 0, y: 0, atype: 0 }, Action { x: 0, y: 0, atype: 0 }, Action { x: 0, y: 0, atype: 0 }, Action { x: 0, y: 0, atype: 0 }
     ];
 
@@ -100,7 +100,7 @@ fn test_dead_2() {
         Block { x: 0, y: 0, btype: 0 }, Block { x: 0, y: 0, btype: 0 }
     ];
     let actions = [
-        Action { x: 185, y: 318, atype: 0 }, Action { x: 417, y: 307, atype: 0 }, Action { x: 649, y: 307, atype: 0 }, Action { x: 881, y: 307, atype: 0 }, Action { x: 1114, y: 307, atype: 0 }, Action { x: 1346, y: 307, atype: 0 },
+        Action { x: 185, y: 318, atype: 1 }, Action { x: 417, y: 307, atype: 1 }, Action { x: 649, y: 307, atype: 1 }, Action { x: 881, y: 307, atype: 1 }, Action { x: 1114, y: 307, atype: 1 }, Action { x: 1346, y: 307, atype: 1 },
         Action { x: 0, y: 0, atype: 0 }, Action { x: 0, y: 0, atype: 0 }
     ];
     let config = Config{

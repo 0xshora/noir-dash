@@ -1,7 +1,7 @@
 mod tests;
 use dep::std;
 
-// btypeL 0->null, 1->block, 2->needle.
+// btypeL 0->null, 1->block, 2->spike.
 struct Block {
     x: u64,
     y: u64,

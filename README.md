@@ -72,7 +72,7 @@ Then, you can copy it and paste it to `./src/tests/main_test.nr` or smth.
 
 ## TODO
 - [x] Handle the size of objects
-- [ ] Test for needles
+- [ ] Test for needles -> think player_y at the left and at the right if both.y > needle -> safe.
 - [ ] Test for complex stages
 - [ ] Randomize initial positions for each user?
 - [x] check if the user jump from correct place. (not from air.)

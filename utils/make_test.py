@@ -16,7 +16,7 @@ def read_toml(file_path):
 def convert_btype(s):
     if s == "block":
         return 1
-    elif s == "needle":
+    elif s == "spike":
         return 2
     else:
         return 0
