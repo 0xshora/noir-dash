@@ -70,9 +70,9 @@ $ python ./utils/make_test.py -c ./data/testStage/config_1.toml -a ./data/testSt
 
 Then, you can copy it and paste it to `./src/tests/main_test.nr` or smth.
 
-## TODO
+## TODOs
 - [x] Handle the size of objects
-- [ ] Test for needles -> think player_y at the left and at the right if both.y > needle -> safe.
+- [x] Test for needles
 - [ ] Test for complex stages
 - [ ] Randomize initial positions for each user?
 - [x] check if the user jump from correct place. (not from air.)
