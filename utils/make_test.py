@@ -42,8 +42,10 @@ fn {test_name}() {{
         preparation_width: {config['preparation_width']},
         player_width_half: {config['player_width_half']},
         player_height_half: {config['player_height_half']},
-        block_width_half: {config['block_width_half']},
-        block_height_half: {config['block_height_half']},
+        block_width_half: {config.get('block_width_half', 0)},
+        block_height_half: {config.get('block_width_half', 0)},
+        spike_width_half: {config.get('spike_width_half', 0)},
+        spike_height_half: {config.get('spike_height_half', 0)},
     }};
     
     main(objects, actions, config);

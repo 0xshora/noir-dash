@@ -26,6 +26,8 @@ struct Config {
     player_height_half: u64,
     block_width_half: u64,
     block_height_half: u64,
+    spike_width_half: u64,
+    spike_height_half: u64
 }
 
 fn main(
@@ -78,7 +80,17 @@ fn main(
                 }
             }
 
-            let length = object_x - actions[idx].x - config.block_width_half - config.player_width_half; // check the collision on the left side.
+            let mut length = 0;
+            let mut length_right = 0;
+
+            if (objects[i].btype == 1) {
+                length = object_x - actions[idx].x - config.block_width_half - config.player_width_half; // check the collision on the left side.
+            } else if (objects[i].btype == 2) {
+                length = object_x - actions[idx].x - config.spike_width_half - config.player_width_half; // check the collision on the left side.
+                length_right = object_x - actions[idx].x + config.spike_width_half + config.player_width_half; // check the collision on the right side.
+            }
+
+            // let length = object_x - actions[idx].x - config.block_width_half - config.player_width_half; // check the collision on the left side.
             if length > ACTION_THRESHOLD {
                 // the closest action is too far.
                 std::println("The closest action is too far.");
@@ -86,7 +98,7 @@ fn main(
                 std::print("The closest action is: ");
                 std::println(actions[idx]);
 
-                let length = object_x - actions[idx].x - config.block_width_half - config.player_width_half; // check the collision on the left side.
+                // let length = object_x - actions[idx].x - config.block_width_half - config.player_width_half; // check the collision on the left side.
 
                 if (actions[idx].y > ground_y - HEIGHT_THRESHOLD & actions[idx].y < ground_y + HEIGHT_THRESHOLD) {
                     std::println("the player jumped from the ground.");
@@ -106,18 +118,28 @@ fn main(
 
 
                 let player_y_0 = actions[idx].y;
-                let mut player_y = 0;
+                let mut player_y_left = 0;
+                let mut player_y_right = 0;
+                // let length_right = object_x - actions[idx].x + config.block_width_half + config.player_width_half; // check the collision on the right side. (where block_width_half == spike_width_half)
                 let t = length * 100 / config.speed_x; // multiply by 100 to avoid float.
+                let t_right = length_right * 100 / config.speed_x; // multiply by 100 to avoid float.
                 // std::println(config.speed_y * t / 100);
 
                 // divide by 100(^2) to reset to the original scale.
                 // p_y = p_y_0 + g * t^2 / 2 - v_y * t (cuz top-y==0, bottom-y==max).
                 // if p_y < 0, the player is outside of the screen. 
                 if (player_y_0 + config.gravity_y * t * t / (10000 * 2) < (config.speed_y * t / 100)) {
-                    std::println("player is outside");
-                    player_y = 0;
+                    std::println("player is outside on the right");
+                    player_y_left = 0;
                 } else {
-                    player_y = player_y_0 + config.gravity_y * t * t / (10000 * 2) - (config.speed_y * t / 100);
+                    player_y_left = player_y_0 + config.gravity_y * t * t / (10000 * 2) - (config.speed_y * t / 100);
+                }
+
+                if (player_y_0 + config.gravity_y * t_right * t_right / (10000 * 2) < (config.speed_y * t_right / 100)) {
+                    std::println("player is outside on the right");
+                    player_y_right = 0;
+                } else {
+                    player_y_right = player_y_0 + config.gravity_y * t_right * t_right / (10000 * 2) - (config.speed_y * t_right / 100);
                 }
 
                 std::print("length: ");
@@ -128,24 +150,45 @@ fn main(
                 std::println(config.speed_y);
                 std::print("Gravity: ");
                 std::println(config.gravity_y);
-                std::print("player_y: ");
-                std::println(player_y);
                 std::print("object_y: ");
                 std::println(object_y);
+                std::print("player_y_left: ");
+                std::println(player_y_left);
+                std::print("length_right: ");
+                std::println(length_right);
+                std::print("t_right: ");
+                std::println(t_right);
+                std::print("player_y_right: ");
+                std::println(player_y_right);
 
-                std::print("player_y + config.player_height_half: ");
-                std::println(player_y + config.player_height_half);
+                std::print("player_y_left + config.player_height_half: ");
+                std::println(player_y_left + config.player_height_half);
                 std::print("object_y - config.block_height_half: ");
                 std::println(object_y - config.block_height_half);
+                std::print("player_y_right + config.player_height_half: ");
+                std::println(player_y_right + config.player_height_half);
+
 
                 // check if the player's bottom-right is above the object's top-left.
                 // check if the player's top-right is below the object's bottom-left as well.(WIP)
-                if (player_y + config.player_height_half <= object_y - config.block_height_half) {
-                    std::println("Player is above the object.");
-                    is_alive = true;
-                } else {
+
+                // if the object's type is block -> check the left side of the object.
+                // if the object's type is spike -> check the both side of the object.
+                
+                if (player_y_left + config.player_height_half >= object_y - config.block_height_half) {
                     std::println("Player is below the object.");
                     is_alive = false;
+                } else if (objects[i].btype == 2) {
+                    std::println("The object is a spike.");
+                    if (player_y_right + config.player_height_half <= object_y + config.spike_height_half) {
+                        std::println("Player is above the spike.");
+                        is_alive = true;
+                    } else {
+                        std::println("Player hit the spike.");
+                        is_alive = false;
+                    }
+                } else {
+                    is_alive = true;
                 }
             }
 

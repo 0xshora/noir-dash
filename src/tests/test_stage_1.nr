@@ -33,6 +33,8 @@ fn test_clear_1() {
         player_height_half: 21,
         block_width_half: 25,
         block_height_half: 28,
+        spike_width_half: 25,
+        spike_height_half: 20,
     };
     
     main(objects, actions, config);
@@ -63,6 +65,8 @@ fn test_clear_2() {
         player_height_half: 21,
         block_width_half: 25,
         block_height_half: 28,
+        spike_width_half: 25,
+        spike_height_half: 20,
     };
     
     main(objects, actions, config);
@@ -88,6 +92,8 @@ fn test_dead_1() {
         player_height_half: 21,
         block_width_half: 25,
         block_height_half: 28,
+        spike_width_half: 25,
+        spike_height_half: 20,
     };
     
     main(objects, actions, config);
@@ -114,6 +120,8 @@ fn test_dead_2() {
         player_height_half: 21,
         block_width_half: 25,
         block_height_half: 28,
+        spike_width_half: 25,
+        spike_height_half: 20,
     };
     
     main(objects, actions, config);

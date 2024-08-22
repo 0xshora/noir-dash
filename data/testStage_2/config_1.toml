@@ -8,3 +8,5 @@ player_width_half = 25
 player_height_half = 21
 block_width_half = 25
 block_height_half = 28
+spike_width_half = 25
+spike_height_half = 20
