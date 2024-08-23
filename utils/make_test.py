@@ -2,8 +2,8 @@ import argparse
 import json
 import toml
 
-MAX_OBJETCS = 3
-MAX_ACTIONS = 8
+MAX_OBJETCS = 50
+MAX_ACTIONS = 50
 
 def read_json(file_path):
     with open(file_path, 'r') as f:
@@ -26,11 +26,11 @@ def generate_noir_test(config, actions, objects, test_name):
 #[test]
 fn {test_name}() {{
     let objects = [
-        {', '.join(f"Block {{ x: {obj['x']}, y: {obj['y']}, btype: {convert_btype(obj['btype'])} }}" for obj in objects)},
+        {', '.join(f"Block {{ x: {obj['x']}, y: {obj['y']}, btype: {convert_btype(obj['type'])} }}" for obj in objects)},
         {', '.join(f"Block {{ x: 0, y: 0, btype: 0 }}" for _ in range(MAX_OBJETCS - len(objects)))}
     ];
     let actions = [
-        {', '.join(f"Action {{ x: {int(action['x'])}, y: {int(action['y'])}, atype: {0 if action['action'] == 'jump' else 1} }}" for action in actions)},
+        {', '.join(f"Action {{ x: {int(action['x'])}, y: {int(action['y'])}, atype: {1 if action['action'] == 'jump' else 0} }}" for action in actions)},
         {', '.join(f"Action {{ x: 0, y: 0, atype: 0 }}" for _ in range(MAX_ACTIONS - len(actions)))}
     ];
     let config = Config{{

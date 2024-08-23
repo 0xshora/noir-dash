@@ -38,6 +38,216 @@ atype = ""
 x = ""
 y = ""
 
+[[actions]]
+atype = ""
+x = ""
+y = ""
+
+[[actions]]
+atype = ""
+x = ""
+y = ""
+
+[[actions]]
+atype = ""
+x = ""
+y = ""
+
+[[actions]]
+atype = ""
+x = ""
+y = ""
+
+[[actions]]
+atype = ""
+x = ""
+y = ""
+
+[[actions]]
+atype = ""
+x = ""
+y = ""
+
+[[actions]]
+atype = ""
+x = ""
+y = ""
+
+[[actions]]
+atype = ""
+x = ""
+y = ""
+
+[[actions]]
+atype = ""
+x = ""
+y = ""
+
+[[actions]]
+atype = ""
+x = ""
+y = ""
+
+[[actions]]
+atype = ""
+x = ""
+y = ""
+
+[[actions]]
+atype = ""
+x = ""
+y = ""
+
+[[actions]]
+atype = ""
+x = ""
+y = ""
+
+[[actions]]
+atype = ""
+x = ""
+y = ""
+
+[[actions]]
+atype = ""
+x = ""
+y = ""
+
+[[actions]]
+atype = ""
+x = ""
+y = ""
+
+[[actions]]
+atype = ""
+x = ""
+y = ""
+
+[[actions]]
+atype = ""
+x = ""
+y = ""
+
+[[actions]]
+atype = ""
+x = ""
+y = ""
+
+[[actions]]
+atype = ""
+x = ""
+y = ""
+
+[[actions]]
+atype = ""
+x = ""
+y = ""
+
+[[actions]]
+atype = ""
+x = ""
+y = ""
+
+[[actions]]
+atype = ""
+x = ""
+y = ""
+
+[[actions]]
+atype = ""
+x = ""
+y = ""
+
+[[actions]]
+atype = ""
+x = ""
+y = ""
+
+[[actions]]
+atype = ""
+x = ""
+y = ""
+
+[[actions]]
+atype = ""
+x = ""
+y = ""
+
+[[actions]]
+atype = ""
+x = ""
+y = ""
+
+[[actions]]
+atype = ""
+x = ""
+y = ""
+
+[[actions]]
+atype = ""
+x = ""
+y = ""
+
+[[actions]]
+atype = ""
+x = ""
+y = ""
+
+[[actions]]
+atype = ""
+x = ""
+y = ""
+
+[[actions]]
+atype = ""
+x = ""
+y = ""
+
+[[actions]]
+atype = ""
+x = ""
+y = ""
+
+[[actions]]
+atype = ""
+x = ""
+y = ""
+
+[[actions]]
+atype = ""
+x = ""
+y = ""
+
+[[actions]]
+atype = ""
+x = ""
+y = ""
+
+[[actions]]
+atype = ""
+x = ""
+y = ""
+
+[[actions]]
+atype = ""
+x = ""
+y = ""
+
+[[actions]]
+atype = ""
+x = ""
+y = ""
+
+[[actions]]
+atype = ""
+x = ""
+y = ""
+
+[[actions]]
+atype = ""
+x = ""
+y = ""
+
 [config]
 block_height_half = ""
 block_width_half = ""
@@ -51,6 +261,241 @@ speed_x = ""
 speed_y = ""
 spike_height_half = ""
 spike_width_half = ""
+
+[[objects]]
+btype = ""
+x = ""
+y = ""
+
+[[objects]]
+btype = ""
+x = ""
+y = ""
+
+[[objects]]
+btype = ""
+x = ""
+y = ""
+
+[[objects]]
+btype = ""
+x = ""
+y = ""
+
+[[objects]]
+btype = ""
+x = ""
+y = ""
+
+[[objects]]
+btype = ""
+x = ""
+y = ""
+
+[[objects]]
+btype = ""
+x = ""
+y = ""
+
+[[objects]]
+btype = ""
+x = ""
+y = ""
+
+[[objects]]
+btype = ""
+x = ""
+y = ""
+
+[[objects]]
+btype = ""
+x = ""
+y = ""
+
+[[objects]]
+btype = ""
+x = ""
+y = ""
+
+[[objects]]
+btype = ""
+x = ""
+y = ""
+
+[[objects]]
+btype = ""
+x = ""
+y = ""
+
+[[objects]]
+btype = ""
+x = ""
+y = ""
+
+[[objects]]
+btype = ""
+x = ""
+y = ""
+
+[[objects]]
+btype = ""
+x = ""
+y = ""
+
+[[objects]]
+btype = ""
+x = ""
+y = ""
+
+[[objects]]
+btype = ""
+x = ""
+y = ""
+
+[[objects]]
+btype = ""
+x = ""
+y = ""
+
+[[objects]]
+btype = ""
+x = ""
+y = ""
+
+[[objects]]
+btype = ""
+x = ""
+y = ""
+
+[[objects]]
+btype = ""
+x = ""
+y = ""
+
+[[objects]]
+btype = ""
+x = ""
+y = ""
+
+[[objects]]
+btype = ""
+x = ""
+y = ""
+
+[[objects]]
+btype = ""
+x = ""
+y = ""
+
+[[objects]]
+btype = ""
+x = ""
+y = ""
+
+[[objects]]
+btype = ""
+x = ""
+y = ""
+
+[[objects]]
+btype = ""
+x = ""
+y = ""
+
+[[objects]]
+btype = ""
+x = ""
+y = ""
+
+[[objects]]
+btype = ""
+x = ""
+y = ""
+
+[[objects]]
+btype = ""
+x = ""
+y = ""
+
+[[objects]]
+btype = ""
+x = ""
+y = ""
+
+[[objects]]
+btype = ""
+x = ""
+y = ""
+
+[[objects]]
+btype = ""
+x = ""
+y = ""
+
+[[objects]]
+btype = ""
+x = ""
+y = ""
+
+[[objects]]
+btype = ""
+x = ""
+y = ""
+
+[[objects]]
+btype = ""
+x = ""
+y = ""
+
+[[objects]]
+btype = ""
+x = ""
+y = ""
+
+[[objects]]
+btype = ""
+x = ""
+y = ""
+
+[[objects]]
+btype = ""
+x = ""
+y = ""
+
+[[objects]]
+btype = ""
+x = ""
+y = ""
+
+[[objects]]
+btype = ""
+x = ""
+y = ""
+
+[[objects]]
+btype = ""
+x = ""
+y = ""
+
+[[objects]]
+btype = ""
+x = ""
+y = ""
+
+[[objects]]
+btype = ""
+x = ""
+y = ""
+
+[[objects]]
+btype = ""
+x = ""
+y = ""
+
+[[objects]]
+btype = ""
+x = ""
+y = ""
 
 [[objects]]
 btype = ""

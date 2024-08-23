@@ -28,3 +28,9 @@
 
 ### test stage info:
 - test_stage_1: only 1 block(200, 0)
+- test_stage_2: only 1 spike(200, 0)
+
+### 現状対応出来なさそうなステージ
+- jumpせずに、オブジェクトの段差でplayerの位置が変わるステージ (階段状)。
+- object: holeを持つステージ。
+- プレイヤーの上側にオブジェクトがあるステージ。
