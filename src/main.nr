@@ -36,16 +36,16 @@ fn is_valid_jump(action_y: u64, ground_y: u64, object_y: u64, HEIGHT_THRESHOLD: 
 }
 
 fn main(
-    objects: pub [Block; 50],
-    actions: [Action; 50],
+    objects: pub [Block; 3],
+    actions: [Action; 8],
     config: Config
 ) {
     std::println(objects);
     std::println(actions);
 
     // Constants
-    let MAX_OBJECTS = 50;
-    let MAX_ACTIONS = 50;
+    let MAX_OBJECTS = 3;
+    let MAX_ACTIONS = 8;
 
     let ACTION_THRESHOLD = 300; // the length of jump.
     let HEIGHT_THRESHOLD = 40; // admit the player is not cheating if the height difference is less than this value.
@@ -208,7 +208,9 @@ fn main(
                         std::println("player is outside on the right");
                         player_y_right = 0;
                     } else {
-                        player_y_right = player_y_0 + config.gravity_y * t_right * t_right / (10000 * 2) - (config.speed_y * t_right / 100);
+                        player_y_right = player_y_0;
+                        player_y_right += std::wrapping_sub(config.gravity_y * t_right * t_right / (10000 * 2), config.speed_y * t_right / 100);
+                        // player_y_right = player_y_0 + config.gravity_y * t_right * t_right / (10000 * 2) - (config.speed_y * t_right / 100);
                     }
                 } else if (action_type == 2) {
                     player_y_left = player_y_0 + config.gravity_y * t * t / (10000 * 2);

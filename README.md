@@ -42,6 +42,33 @@ or
 $ nargo test --show-output <test-case>
 ```
 
+### Generate A Proof
+
+```sh
+$ nargo execute witness.gz
+```
+
+```sh
+$ bb prove -b ./target/noir_dash.json -w ./target/witness.gz -o ./target/proof
+```
+
+```sh
+$ bb prove_output_all -b ./target/noir_dash.json -w ./target/witness.gz -o ./target/output
+```
+
+### Generate A verification key
+```sh
+$ bb write_vk -b ./target/noir_dash.json -o ./target/vk       
+```
+
+
+### Verfiy by command
+If verification is successful, the command will execute silently. If the proof is invalid, the command will throw an error.
+
+```sh
+$ bb verify -k ./target/vk -p ./target/proof
+```
+
 ## Data
 
 The game uses several data files to configure stages and user interactions. Below are the descriptions of these files:

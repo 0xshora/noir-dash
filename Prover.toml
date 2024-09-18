@@ -1,513 +1,68 @@
 [[actions]]
-atype = ""
-x = ""
-y = ""
+atype = "1"
+x = "1199"
+y = "319"
 
 [[actions]]
-atype = ""
-x = ""
-y = ""
+atype = "0"
+x = "0"
+y = "0"
 
 [[actions]]
-atype = ""
-x = ""
-y = ""
+atype = "0"
+x = "0"
+y = "0"
 
 [[actions]]
-atype = ""
-x = ""
-y = ""
+atype = "0"
+x = "0"
+y = "0"
 
 [[actions]]
-atype = ""
-x = ""
-y = ""
+atype = "0"
+x = "0"
+y = "0"
 
 [[actions]]
-atype = ""
-x = ""
-y = ""
+atype = "0"
+x = "0"
+y = "0"
 
 [[actions]]
-atype = ""
-x = ""
-y = ""
+atype = "0"
+x = "0"
+y = "0"
 
 [[actions]]
-atype = ""
-x = ""
-y = ""
-
-[[actions]]
-atype = ""
-x = ""
-y = ""
-
-[[actions]]
-atype = ""
-x = ""
-y = ""
-
-[[actions]]
-atype = ""
-x = ""
-y = ""
-
-[[actions]]
-atype = ""
-x = ""
-y = ""
-
-[[actions]]
-atype = ""
-x = ""
-y = ""
-
-[[actions]]
-atype = ""
-x = ""
-y = ""
-
-[[actions]]
-atype = ""
-x = ""
-y = ""
-
-[[actions]]
-atype = ""
-x = ""
-y = ""
-
-[[actions]]
-atype = ""
-x = ""
-y = ""
-
-[[actions]]
-atype = ""
-x = ""
-y = ""
-
-[[actions]]
-atype = ""
-x = ""
-y = ""
-
-[[actions]]
-atype = ""
-x = ""
-y = ""
-
-[[actions]]
-atype = ""
-x = ""
-y = ""
-
-[[actions]]
-atype = ""
-x = ""
-y = ""
-
-[[actions]]
-atype = ""
-x = ""
-y = ""
-
-[[actions]]
-atype = ""
-x = ""
-y = ""
-
-[[actions]]
-atype = ""
-x = ""
-y = ""
-
-[[actions]]
-atype = ""
-x = ""
-y = ""
-
-[[actions]]
-atype = ""
-x = ""
-y = ""
-
-[[actions]]
-atype = ""
-x = ""
-y = ""
-
-[[actions]]
-atype = ""
-x = ""
-y = ""
-
-[[actions]]
-atype = ""
-x = ""
-y = ""
-
-[[actions]]
-atype = ""
-x = ""
-y = ""
-
-[[actions]]
-atype = ""
-x = ""
-y = ""
-
-[[actions]]
-atype = ""
-x = ""
-y = ""
-
-[[actions]]
-atype = ""
-x = ""
-y = ""
-
-[[actions]]
-atype = ""
-x = ""
-y = ""
-
-[[actions]]
-atype = ""
-x = ""
-y = ""
-
-[[actions]]
-atype = ""
-x = ""
-y = ""
-
-[[actions]]
-atype = ""
-x = ""
-y = ""
-
-[[actions]]
-atype = ""
-x = ""
-y = ""
-
-[[actions]]
-atype = ""
-x = ""
-y = ""
-
-[[actions]]
-atype = ""
-x = ""
-y = ""
-
-[[actions]]
-atype = ""
-x = ""
-y = ""
-
-[[actions]]
-atype = ""
-x = ""
-y = ""
-
-[[actions]]
-atype = ""
-x = ""
-y = ""
-
-[[actions]]
-atype = ""
-x = ""
-y = ""
-
-[[actions]]
-atype = ""
-x = ""
-y = ""
-
-[[actions]]
-atype = ""
-x = ""
-y = ""
-
-[[actions]]
-atype = ""
-x = ""
-y = ""
-
-[[actions]]
-atype = ""
-x = ""
-y = ""
-
-[[actions]]
-atype = ""
-x = ""
-y = ""
+atype = "0"
+x = "0"
+y = "0"
 
 [config]
-block_height_half = ""
-block_width_half = ""
-bufferHeight = ""
-gravity_y = ""
-height = ""
-player_height_half = ""
-player_width_half = ""
-preparation_width = ""
-speed_x = ""
-speed_y = ""
-spike_height_half = ""
-spike_width_half = ""
+block_height_half = "28"
+block_width_half = "25"
+bufferHeight = "70"
+gravity_y = "2000"
+height = "390"
+player_height_half = "21"
+player_width_half = "25"
+preparation_width = "1200"
+speed_x = "340"
+speed_y = "700"
+spike_height_half = "20"
+spike_width_half = "25"
 
 [[objects]]
-btype = ""
-x = ""
-y = ""
+btype = "1"
+x = "200"
+y = "0"
 
 [[objects]]
-btype = ""
-x = ""
-y = ""
+btype = "0"
+x = "0"
+y = "0"
 
 [[objects]]
-btype = ""
-x = ""
-y = ""
-
-[[objects]]
-btype = ""
-x = ""
-y = ""
-
-[[objects]]
-btype = ""
-x = ""
-y = ""
-
-[[objects]]
-btype = ""
-x = ""
-y = ""
-
-[[objects]]
-btype = ""
-x = ""
-y = ""
-
-[[objects]]
-btype = ""
-x = ""
-y = ""
-
-[[objects]]
-btype = ""
-x = ""
-y = ""
-
-[[objects]]
-btype = ""
-x = ""
-y = ""
-
-[[objects]]
-btype = ""
-x = ""
-y = ""
-
-[[objects]]
-btype = ""
-x = ""
-y = ""
-
-[[objects]]
-btype = ""
-x = ""
-y = ""
-
-[[objects]]
-btype = ""
-x = ""
-y = ""
-
-[[objects]]
-btype = ""
-x = ""
-y = ""
-
-[[objects]]
-btype = ""
-x = ""
-y = ""
-
-[[objects]]
-btype = ""
-x = ""
-y = ""
-
-[[objects]]
-btype = ""
-x = ""
-y = ""
-
-[[objects]]
-btype = ""
-x = ""
-y = ""
-
-[[objects]]
-btype = ""
-x = ""
-y = ""
-
-[[objects]]
-btype = ""
-x = ""
-y = ""
-
-[[objects]]
-btype = ""
-x = ""
-y = ""
-
-[[objects]]
-btype = ""
-x = ""
-y = ""
-
-[[objects]]
-btype = ""
-x = ""
-y = ""
-
-[[objects]]
-btype = ""
-x = ""
-y = ""
-
-[[objects]]
-btype = ""
-x = ""
-y = ""
-
-[[objects]]
-btype = ""
-x = ""
-y = ""
-
-[[objects]]
-btype = ""
-x = ""
-y = ""
-
-[[objects]]
-btype = ""
-x = ""
-y = ""
-
-[[objects]]
-btype = ""
-x = ""
-y = ""
-
-[[objects]]
-btype = ""
-x = ""
-y = ""
-
-[[objects]]
-btype = ""
-x = ""
-y = ""
-
-[[objects]]
-btype = ""
-x = ""
-y = ""
-
-[[objects]]
-btype = ""
-x = ""
-y = ""
-
-[[objects]]
-btype = ""
-x = ""
-y = ""
-
-[[objects]]
-btype = ""
-x = ""
-y = ""
-
-[[objects]]
-btype = ""
-x = ""
-y = ""
-
-[[objects]]
-btype = ""
-x = ""
-y = ""
-
-[[objects]]
-btype = ""
-x = ""
-y = ""
-
-[[objects]]
-btype = ""
-x = ""
-y = ""
-
-[[objects]]
-btype = ""
-x = ""
-y = ""
-
-[[objects]]
-btype = ""
-x = ""
-y = ""
-
-[[objects]]
-btype = ""
-x = ""
-y = ""
-
-[[objects]]
-btype = ""
-x = ""
-y = ""
-
-[[objects]]
-btype = ""
-x = ""
-y = ""
-
-[[objects]]
-btype = ""
-x = ""
-y = ""
-
-[[objects]]
-btype = ""
-x = ""
-y = ""
-
-[[objects]]
-btype = ""
-x = ""
-y = ""
-
-[[objects]]
-btype = ""
-x = ""
-y = ""
-
-[[objects]]
-btype = ""
-x = ""
-y = ""
+btype = "0"
+x = "0"
+y = "0"
